@@ -1,0 +1,111 @@
+.login-page {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url("../../assets/bg44.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+
+    
+  }
+
+
+
+  /*
+  
+  .login-page {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url("../../assets/bg4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    opacity:0.5;
+
+
+    
+  }
+  
+  */
+  
+  mat-card {
+    width: 30%;
+    margin: 10% auto;
+    border-radius: 8px;
+  }
+  mat-form-field, mat-checkbox {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  mat-card-content {
+    margin-top: 20px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    background-color:rgb(238, 138, 138);
+    color:white
+  }
+  
+  
+  .headTitle{ 
+    font-size: 30px;
+    padding-top: -10px;
+    margin-bottom: -40px;
+    color:rgb(238, 138, 138);
+  }
+
+  .logo{
+    width:6%;
+    height:6%;
+    margin-right: 20px;
+    border:2px solid rgb(56, 56, 148);
+    border-radius: 5px;
+  }
+
+
+  .box{ 
+    margin-top: 70px;
+    width: 85%;
+    height: 76%;
+  }
+
+.left{
+ 
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    padding-left: 100px;
+}
+
+.right {
+  
+    overflow: hidden;
+    padding-left: 120px;
+    padding-top: 20px;
+  }
+
+  .userButton{
+    float: left;
+    width: 50%;
+    overflow: hidden;
+  }
+  .coachButton{
+    overflow: hidden;
+  }
+

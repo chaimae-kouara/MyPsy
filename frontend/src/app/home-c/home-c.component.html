@@ -1,0 +1,105 @@
+<div class="background">
+<div class="container">
+  <div class="main-body"><br>
+
+        <!-- /Breadcrumb -->
+  
+        <div class="row gutters-sm">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                  <img src="../../assets/hide-women.jpg" alt="Admin" class="rounded-circle" width="150">
+                  <div class="mt-3">
+                    <h4>John Doe</h4>
+                    <p class="text-secondary mb-1">Speciality</p>
+                    <p class="text-muted font-size-sm">address, adress, address</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Full Name</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    Kenneth Valdez
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Email</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    fip@jukmuh.al
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Phone</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    (239) 816-9029
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Mobile</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    (320) 380-4539
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Address</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    Bay Area, San Francisco, CA
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="col-md-8">
+              <div class="grid-container ">
+                
+                <mat-grid-list class="cards-float" cols="2" rowHeight="350px">
+                  <mat-grid-tile *ngFor="let card of cards" [colspan]="2" [rowspan]="1">
+                    <mat-card class="dashboard-card card-image" [style.background-image] = "card.getImage()">
+                      <mat-card-header>
+                        <mat-card-title>
+                          {{card.getTitle()}}
+                          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <mat-icon>more_vert</mat-icon>
+                          </button>
+                          <mat-menu #menu="matMenu" xPosition="before">
+                            <button mat-menu-item>Expand</button>
+                            <button mat-menu-item>Remove</button>
+                          </mat-menu>
+                        </mat-card-title>
+                      </mat-card-header>
+                      <mat-card-content class="dashboard-card-content card-url">
+                        <a href="{{card.getUrl()}}">{{card.getUrl()}}</a>
+                      </mat-card-content>
+                    </mat-card>
+                  </mat-grid-tile>
+
+                  
+                </mat-grid-list>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>

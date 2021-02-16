@@ -1,0 +1,42 @@
+
+<div class="content background">
+    <div class="container"><br>
+
+       
+        <div class="row">
+            <!-- end col -->
+            <div class="col-lg-4"  *ngFor="let card of cards">
+                <div class="text-center card-box">
+                    <div class="member-card pt-2 pb-2">
+                        <div class="thumb-lg member-thumb mx-auto"><img src={{card.getImage()}} class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                        <div class="">
+                            <h4>{{card.getName()}}</h4>
+                            <p class="text-muted">{{card.getSpeciality()}}</p>
+                        </div>
+                        <button type="button" class="btn btn-primary mt-3 btn-rounded waves-effect w-md waves-light">View Profile</button>
+                        <br><br>
+                        <div class="card box">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <p class="text-muted end">Email: </p>
+                                        <p class="text-muted end">Number Phone: </p>
+                                        <p class="text-muted end">Address: </p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <p>{{card.getEmail()}}</p>
+                                        <p>{{card.getPhone()}}</p>
+                                        <p>{{card.getAddress()}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- end row -->
+    </div>
+    <!-- container -->
+</div>

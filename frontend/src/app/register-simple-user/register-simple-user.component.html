@@ -1,0 +1,109 @@
+<div class="login-page">
+    <mat-card class="mat-elevation-z12 box">
+      <mat-card-title class="headFont">SignIn/SignUp</mat-card-title>
+      <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+
+        <mat-tab label="Sign In" >
+            <mat-card-content>
+              <form (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="NickName"
+                    required
+                    name="nickname"
+                    ngModel
+                    #nick_name="ngModel">
+                    <mat-error *ngIf="nick_name.invalid">NickName is required</mat-error>
+                  <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Password"
+                    type="password"
+                    required
+                    minlength="6"
+                    name="password"
+                    ngModel
+                    #password="ngModel">
+                    <mat-error
+                      *ngIf="password.errors && password.errors.required">
+                      Password is required
+                    </mat-error>
+                    <mat-error
+                      *ngIf="password.errors && password.errors.minlength">
+                      Password must be of length 6
+                    </mat-error>
+                  <mat-icon matSuffix>lock</mat-icon>
+                </mat-form-field>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  class="login-button"
+                  type="submit"
+                  [disabled]="!signInForm.valid"
+                  >
+                  Sign In
+                </button>
+              </form>
+            </mat-card-content>
+        </mat-tab>
+        
+
+        <mat-tab label="Sign Up">
+          <mat-card-content>
+            <form (ngSubmit)="onSubmitRegistration(userRegistrationForm)" #userRegistrationForm="ngForm">
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Nickname"
+                  required
+                  ngModel
+                  name="nickname"
+                  #nickname="ngModel">
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error
+                  *ngIf="nickname.invalid">
+                  Nickname is required
+                </mat-error>
+              </mat-form-field>
+              
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  required
+                  minlength="6"
+                  ngModel
+                  name="password"
+                  #password="ngModel">
+                  <mat-error
+                    *ngIf="password.errors && password.errors.required">
+                    Password is required
+                  </mat-error>
+                  <mat-error
+                    *ngIf="password.errors && password.errors.minlength">
+                    Password must be of length 6
+                  </mat-error>
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+
+              <button
+                mat-raised-button
+                color="primary"
+                class="login-button"
+                type="submit"
+                [disabled]="!userRegistrationForm.valid"
+                >
+                Sign Up
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
+  

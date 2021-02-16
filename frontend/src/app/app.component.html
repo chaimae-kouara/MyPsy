@@ -1,0 +1,76 @@
+<!--  *ngIf="authenticationService.isAuthenticated" -->
+
+<nav class="navbar navbar-expand-md navbar-dark navbar-custom " aria-label="Fourth navbar example" *ngIf="coachAuthenticationService.coachIsAuthenticated">
+    <div class="container-fluid">
+      
+      <mat-card-content >
+        <img src="../../assets/logo2.png" alt="Logo" class="logo">
+    </mat-card-content>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+
+          <li class="nav-item active">
+            <button mat-button class="login-button nav_buttons" routerLink= "/homec">Home </button>
+          </li>
+
+
+          <li class="nav-item active">
+            <button mat-button class="login-button nav_buttons" routerLink= "/profilec">My Profile </button>
+          </li>
+
+          <li class="nav-item active">
+            <button mat-button class="login-button nav_buttons">Appointments </button>
+          </li>
+
+          <li class="nav-item active">
+            <button mat-button class="login-button nav_buttons nav_logout">Logout </button>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- *ngIf="userAuthenticationService.userIsAuthenticated" -->
+  <nav class="navbar navbar-expand-md navbar-dark navbar-custom " aria-label="Fourth navbar example" *ngIf="userAuthenticationService.userIsAuthenticated">
+    <div class="container-fluid">
+      
+      <mat-card-content >
+        <img src="../../assets/logo2.png" alt="Logo" class="logo">
+    </mat-card-content>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+
+          <li class="nav-item active">
+            <button mat-button class="login-button nav_buttons" routerLink= "/homeu">Home </button>
+          </li>
+
+
+          <li class="nav-item active">
+            <button mat-button class="login-button nav_buttons" routerLink= "/listCoachs">Get Help From Expert Coachs </button>
+          </li>
+
+          <li class="nav-item active">
+            <button mat-button class="login-button nav_buttons nav_logout">Logout </button>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+<router-outlet></router-outlet>
