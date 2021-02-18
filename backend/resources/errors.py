@@ -16,6 +16,19 @@ class DeletingCourseError(Exception):
 class CourseNotExistsError(Exception):
     pass
 
+
+class CommentAlreadyExistsError(Exception):
+    pass
+
+class UpdatingCommentError(Exception):
+    pass
+
+class DeletingCommentError(Exception):
+    pass
+
+class CommentNotExistsError(Exception):
+    pass
+
 class EmailAlreadyExistsError(Exception):
     pass
 
@@ -27,32 +40,46 @@ errors = {
         "message": "Something went wrong",
         "status": 500
     },
-     "SchemaValidationError": {
-         "message": "Request is missing required fields",
-         "status": 400
-     },
-     "CourseAlreadyExistsError": {
-         "message": "Course with given name already exists",
-         "status": 400
-     },
-     "UpdatingCourseError": {
-         "message": "Updating Course added by other is forbidden",
-         "status": 403
-     },
-     "DeletingCourseError": {
-         "message": "Deleting Course added by other is forbidden",
-         "status": 403
-     },
-     "CourseNotExistsError": {
-         "message": "Course with given id doesn't exists",
-         "status": 400
-     },
-     "EmailAlreadyExistsError": {
-         "message": "User with given email address already exists",
-         "status": 400
-     },
-     "UnauthorizedError": {
-         "message": "Invalid username or password",
-         "status": 401
-     }
+    "SchemaValidationError": {
+        "message": "Request is missing required fields",
+        "status": 400
+    },
+    "CourseAlreadyExistsError": {
+        "message": "Course with given name already exists",
+        "status": 400
+    },
+    "UpdatingCourseError": {
+        "message": "Updating Course added by other is forbidden",
+        "status": 403
+    },
+    "DeletingCourseError": {
+        "message": "Deleting Course added by other is forbidden",
+        "status": 403
+    },
+    "CourseNotExistsError": {
+        "message": "Course with given id doesn't exists",
+        "status": 400
+    },
+
+    "UpdatingCommentError": {
+        "message": "Updating Course added by other is forbidden",
+        "status": 403
+    },
+    "DeletingCommentError": {
+        "message": "Deleting Course added by other is forbidden",
+        "status": 403
+    },
+    "CommentNotExistsError": {
+        "message": "Course with given id doesn't exists",
+        "status": 400
+    },
+
+    "EmailAlreadyExistsError": {
+        "message": "User with given email address already exists",
+        "status": 400
+    },
+    "UnauthorizedError": {
+        "message": "Invalid username or password",
+        "status": 401
+    }
 }
