@@ -9,6 +9,7 @@ def initialize_routes(api):
     api.add_resource(CourseApi, '/api/courses/<id>')
     api.add_resource(CoachesCoursesApi, '/api/coaches/<coach_id>/courses')
     api.add_resource(CoachApi, '/api/coaches/<id>')
+    api.add_resource(CoachesApi, '/api/coaches')
     api.add_resource(CommentsApi, '/api/comments')
     api.add_resource(CommentApi, '/api/comments/<id>')
     api.add_resource(CoachesCommentsApi, '/api/coaches/<coach_id>/comments')
