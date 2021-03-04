@@ -16,7 +16,7 @@ export class ListCoachsComponent implements OnInit {
     this.cards = this.coachService.onGet();
   }
 
-  OnViewProfile(id: Number){
+  OnViewProfile(id: string){
     this.userService.OnViewProfile(id);
   }
 

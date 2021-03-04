@@ -1,6 +1,6 @@
 import { Address } from './Address';
 export class Coach {
-    private id: Number;
+    private id: string;
     private name: string;
     private email: string;
     private password: string;
@@ -9,7 +9,7 @@ export class Coach {
     private address: Address;
     private image: String;
 
-    constructor(id:Number, name: string, email: string, password: string, phone: string, 
+    constructor(id:string, name: string, email: string, password: string, phone: string, 
         speciality: string, address: Address, image:string) {
 
         this.id = id;
@@ -22,7 +22,7 @@ export class Coach {
         this.image = image;
     }
 
-    getId(): Number {
+    getId(): string {
         return this.id;
     }
 

@@ -29,7 +29,7 @@ export class RegisterSimpleUserComponent implements OnInit {
 
   onSubmitRegistration(userRegistrationForm: NgForm){
     //console.log(userRegistrationForm.value);
-    const user = new User(0, userRegistrationForm.value.nickname, userRegistrationForm.value.password);
+    const user = new User("0", userRegistrationForm.value.nickname, userRegistrationForm.value.password);
 
     const signInData = new SignInDataUser(userRegistrationForm.value.nickname, userRegistrationForm.value.password);
 

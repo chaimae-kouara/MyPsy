@@ -24,14 +24,6 @@ export class RegisterUserComponent implements OnInit {
     console.log(signInForm.value);
     const signInData = new SignInDataCoach(signInForm.value.email, signInForm.value.password);
     this.coachService.coach_authenticate(signInData);
-
-/*
-    console.log("--coach signin-->", this.coachService.coachIsAuthenticated);
-    this.coachData = this.coachService.getAuthentificatedCoach(this.coachService.idCoachIsAuthenticated);
-    console.log("--coach data-->", this.coachData);
-*/
-
-
   }
 
   onSubmitRegistration(userRegistrationForm: NgForm){
@@ -42,7 +34,7 @@ export class RegisterUserComponent implements OnInit {
                                 userRegistrationForm.value.city, 
                                 userRegistrationForm.value.street);
 
-    const coach = new Coach(0,
+    const coach = new Coach("0",
                             userRegistrationForm.value.name, 
                             userRegistrationForm.value.email, 
                             userRegistrationForm.value.password, 

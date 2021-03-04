@@ -17,9 +17,9 @@ export class UserService {
   coursesSelectedCoach:Course[] = [];
 
   dataUsers: User[] = [
-    new User(1, "1", "111111"),
-    new User(2, "2", "222222"),
-    new User(3, "3", "333333")
+    new User("1", "1", "111111"),
+    new User("2", "2", "222222"),
+    new User("3", "3", "333333")
   ]
   
   constructor(private router: Router, private coachService:CoachService) { }
@@ -27,7 +27,6 @@ export class UserService {
   user_authenticate(user: SignInDataUser): boolean {
     if (this.checkCredentials(user)) {
       this.userIsAuthenticated = true;
-      //this.router.navigate(['homeu']);
       this.router.navigate(['homeu/',this.idUserIsAuthenticated]);
       return true;
     }
@@ -36,7 +35,7 @@ export class UserService {
   }
 
 
-  logout(id: Number){
+  logout(id: string){
     this.userIsAuthenticated = false;
     this.router.navigate(['user/']);
   }
@@ -60,7 +59,7 @@ export class UserService {
   }
 
 
-  OnViewProfile(id: Number){
+  OnViewProfile(id: string){
     console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",this.coachService.coaches);
     
     for(var c of this.coachService.coaches){
@@ -75,7 +74,7 @@ export class UserService {
 
 
 
-  getCoursesOfCoachSelected(id:Number){
+  getCoursesOfCoachSelected(id:string){
     this.coursesSelectedCoach = [];
     for(var c of this.coachService.courses1){
       if(id == c.getIdCoach()){
@@ -85,7 +84,7 @@ export class UserService {
   }
 
 
-  getSelectedCoach(id: any){
+  getSelectedCoach(id: string){
     for(var c of this.coachService.coaches){
       if(id == c.getId()){
         this.coachSelected = c;

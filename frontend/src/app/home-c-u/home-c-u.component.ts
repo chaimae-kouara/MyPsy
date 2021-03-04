@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CourseService } from './../services/course.service';
-import { Course } from '../model/Course';
 import { CoachService } from '../services/coach.service';
 import { Coach } from '../model/Coach';
-import { NgForm } from '@angular/forms';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -16,10 +13,6 @@ export class HomeCUComponent {
   idSelectedCoach = this.userService.idSelectedCoach;
   coachData!:Coach;
   coursesSelectedCoach:any;
-  //coachSelected:any;
-
-
-
 
   constructor(private userService: UserService, private coachService:CoachService) {}
 

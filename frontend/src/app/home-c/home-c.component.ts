@@ -35,7 +35,7 @@ export class HomeCComponent {
 
   onSubmit(addCourseForm: NgForm){
     console.log("cccccccccccccccc",addCourseForm.value);
-    const course = new Course(0,
+    const course = new Course("0",
                               this.idAuthentificatedCoach,
                               addCourseForm.value.title, 
                               addCourseForm.value.url);
@@ -47,7 +47,7 @@ export class HomeCComponent {
   }
 
 
-  OnDeleteCourse(id:number){
+  OnDeleteCourse(id:string){
     this.coachService.OnDeleteCourse(id, this.idAuthentificatedCoach);
   }
   

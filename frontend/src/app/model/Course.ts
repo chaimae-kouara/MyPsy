@@ -1,22 +1,22 @@
 export class Course {
-    private id: Number;
-    private idCoach: Number;
+    private id: string;
+    private idCoach: string;
     private title: string;
     private url: string;
     
 
-    constructor(id:Number, idCoach:Number, title: string, url: string) {
+    constructor(id:string, idCoach:string, title: string, url: string) {
         this.id = id;
         this.idCoach = idCoach;
         this.title = title;
         this.url = url;
     }
 
-    getIdCoach(): Number {
+    getIdCoach(): string {
         return this.idCoach;
     }
 
-    getId(): Number {
+    getId(): string {
         return this.id;
     }
 

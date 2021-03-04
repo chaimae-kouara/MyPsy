@@ -17,18 +17,18 @@ export class CoachService {
   ];
 
   courses1: Course[] = [
-    new Course(3, 1, "personal development training session 1", "https://www.linkup-coaching.com/"),
-    new Course(4, 1, "personal development training session 2", "https://www.linkup-coaching.com/"),
-    new Course(1, 2, "title3", "url3"),
-    new Course(2, 1, "title4", "url4")
+    new Course("3", "1", "personal development training session 1", "https://www.linkup-coaching.com/"),
+    new Course("4", "1", "personal development training session 2", "https://www.linkup-coaching.com/"),
+    new Course("1", "2", "title3", "url3"),
+    new Course("2","1", "title4", "url4")
   ]
 
   coaches: Coach[] = [
-    new Coach(1, "1", "@1", "111111", "spe1", "spe1", this.addresses[0],'https://bootdey.com/img/Content/avatar/avatar1.png'),
-    new Coach(2, "2", "@2", "222222", "spe2", "spe2", this.addresses[1], 'https://bootdey.com/img/Content/avatar/avatar2.png'),
-    new Coach(3, "4", "@4", "333333", "spe3", "spe3", this.addresses[2], 'https://bootdey.com/img/Content/avatar/avatar3.png'),
-    new Coach(5, "5", "@5", "113", "spe3", "spe3", this.addresses[2], 'https://bootdey.com/img/Content/avatar/avatar4.png'),
-    new Coach(6, "6", "@6", "113", "spe3", "spe3", this.addresses[2], 'https://bootdey.com/img/Content/avatar/avatar5.png')
+    new Coach("1", "1", "@1", "111111", "spe1", "spe1", this.addresses[0],'https://bootdey.com/img/Content/avatar/avatar1.png'),
+    new Coach("2", "2", "@2", "222222", "spe2", "spe2", this.addresses[1], 'https://bootdey.com/img/Content/avatar/avatar2.png'),
+    new Coach("3", "4", "@4", "333333", "spe3", "spe3", this.addresses[2], 'https://bootdey.com/img/Content/avatar/avatar3.png'),
+    new Coach("5", "5", "@5", "113", "spe3", "spe3", this.addresses[2], 'https://bootdey.com/img/Content/avatar/avatar4.png'),
+    new Coach("6", "6", "@6", "113", "spe3", "spe3", this.addresses[2], 'https://bootdey.com/img/Content/avatar/avatar5.png')
   ];
 
 
@@ -51,7 +51,7 @@ export class CoachService {
     return false;
   }
 
-  logout(id: Number){
+  logout(id: string){
     this.coachIsAuthenticated = false;
     this.router.navigate(['coach/']);
   }
@@ -101,7 +101,7 @@ export class CoachService {
   }
 
 
-  OnDeleteCourse(idCourse:number, idCoach:number){
+  OnDeleteCourse(idCourse:string, idCoach:string){
     if(this.coursesAuthentificatedCoach)
     for(var c of this.coursesAuthentificatedCoach){
       if(idCourse == c.getId()){
@@ -117,7 +117,7 @@ export class CoachService {
 
 
 
-  getCoursesOfCoach(id:number){
+  getCoursesOfCoach(id:string){
     for(var c of this.courses1){
       if(id == c.getIdCoach()){
         if(!this.coursesAuthentificatedCoach?.includes(c)){
