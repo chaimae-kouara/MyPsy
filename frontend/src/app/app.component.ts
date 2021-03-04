@@ -9,11 +9,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  idCoachIsAuthenticated:Number = this.coachAuthenticationService.idCoachIsAuthenticated;
+  idUserIsAuthenticated:Number = this.userAuthenticationService.idUserIsAuthenticated;
 
-
-  
   constructor(public coachAuthenticationService: CoachService,
               public userAuthenticationService: UserService) { }
+
+
+  logoutCoach(id: Number){
+    this.coachAuthenticationService.logout(id);
+  }
   
+  logoutUser(id: Number){
+    this.userAuthenticationService.logout(id);
+  }
+
 }
 

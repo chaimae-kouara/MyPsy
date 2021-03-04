@@ -27,11 +27,11 @@ import { HomeCComponent } from './home-c/home-c.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
-import { ProfileCComponent } from './profile-c/profile-c.component';
 import { RegisterSimpleUserComponent } from './register-simple-user/register-simple-user.component';
 import { HomeUComponent } from './home-u/home-u.component';
 import { ListCoachsComponent } from './list-coachs/list-coachs.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeCUComponent } from './home-c-u/home-c-u.component';
 
 @NgModule({
   declarations: [
@@ -39,10 +39,10 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterUserComponent,
     WelcomeComponent,
     HomeCComponent,
-    ProfileCComponent,
     RegisterSimpleUserComponent,
     HomeUComponent,
-    ListCoachsComponent
+    ListCoachsComponent,
+    HomeCUComponent
   ],
   imports: [
     HttpClientModule,

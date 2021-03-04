@@ -1,12 +1,23 @@
 export class Course {
+    private id: Number;
+    private idCoach: Number;
     private title: string;
     private url: string;
-    private image: string;
+    
 
-    constructor(title: string, url: string, image: string) {
+    constructor(id:Number, idCoach:Number, title: string, url: string) {
+        this.id = id;
+        this.idCoach = idCoach;
         this.title = title;
         this.url = url;
-        this.image = image;
+    }
+
+    getIdCoach(): Number {
+        return this.idCoach;
+    }
+
+    getId(): Number {
+        return this.id;
     }
 
     getTitle(): string {
@@ -15,10 +26,6 @@ export class Course {
 
     getUrl(): string {
         return this.url;
-    }
-
-    getImage(): string {
-        return this.image;
     }
 
 }

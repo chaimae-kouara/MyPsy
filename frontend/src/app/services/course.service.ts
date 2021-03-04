@@ -5,11 +5,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CourseService {
+
+
+  coachCourses?:Course[];
+
   courses: Course[] = [
-    new Course("title1", "url1", "url(../assets/x1.jfif)"),
-    new Course("title2", "url2", "url(../assets/x2.jfif)"),
-    new Course("title3", "url3", "url(../assets/x1.jfif)"),
-    new Course("title4", "url4", "url(../assets/x2.jfif)")
+    new Course(3, 1, "personal development training session 1", "https://www.linkup-coaching.com/"),
+    new Course(4, 1, "personal development training session 2", "https://www.linkup-coaching.com/"),
+    new Course(1, 2, "title3", "url3"),
+    new Course(2, 2, "title4", "url4")
   ]
 
   constructor() { }
@@ -18,3 +22,4 @@ export class CourseService {
     return this.courses;
   }
 }
+

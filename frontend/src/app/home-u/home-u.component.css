@@ -1,6 +1,6 @@
 .background{
-    background-image: url("../../assets/bg44.png");
-    min-height: 90%;
+    background-image: url("../../assets/bg2.jpg");
+    height: 100%;
   }
   
 
@@ -16,5 +16,21 @@
 }
 
 .sub_box{
-    height: 820%;
+    height: 97%;
+}
+
+.dep_style{
+		font-size: 30px;
+		padding-top: -10px;
+		margin-bottom: -40px;
+		color:rgb(238, 153, 74);
+		font-family: 'Fira Sans', sans-serif;
+}
+
+.font_style{
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.font_dec{
+	text-decoration: underline;
 }

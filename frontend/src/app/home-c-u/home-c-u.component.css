@@ -1,0 +1,75 @@
+.grid-container {
+    margin: 20px;
+  }
+  
+  .dashboard-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+  
+  .more-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  
+  .dashboard-card-content {
+    text-align: center;
+  }
+  
+  .background{
+    background-image: url("../../assets/bg2.jpg");
+    height: 100%;
+  }
+  
+  
+  .card-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  .card-url{
+    float: left;
+    padding-left: 2%;
+  }
+  
+  .cards-float{
+    margin-top: -33px;
+  }
+  
+  .font_style{
+    font-family: 'Fira Sans', sans-serif;
+  }
+  
+  
+  .login-button {
+    background-color:rgb(173, 173, 173);
+    color:white;
+    float:right;
+    margin-right: 30px;
+  }
+  
+  .add_course{
+    padding-bottom: 50px;
+  }
+  
+  .list_style{
+    width:800px;
+    margin-left: -40px;
+  }
+  
+  .add_course{
+    width:773px;
+    margin-left: -25px;
+  }
+  
+  .add_course_font{
+    color:black;
+  
+  }
+  
+  
