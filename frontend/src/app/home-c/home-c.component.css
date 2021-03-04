@@ -21,7 +21,8 @@
 }
 
 .background{
-  background-image: url("../../assets/bg44.png");
+  background-image: url("../../assets/bg2.jpg");
+  height: 100%;
 }
 
 
@@ -33,10 +34,41 @@
 
 .card-url{
   float: left;
-  padding-top: 35%
-  
+  padding-left: 2%;
 }
 
 .cards-float{
   margin-top: -33px;
 }
+
+.font_style{
+  font-family: 'Fira Sans', sans-serif;
+}
+
+
+.login-button {
+  background-color:rgb(173, 173, 173);
+  color:white;
+  float:right;
+  margin-right: 30px;
+}
+
+.add_course{
+  padding-bottom: 50px;
+}
+
+.list_style{
+  width:800px;
+  margin-left: -40px;
+}
+
+.add_course{
+  width:773px;
+  margin-left: -25px;
+}
+
+.add_course_font{
+  color:black;
+
+}
+

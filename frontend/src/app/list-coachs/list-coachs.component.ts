@@ -1,3 +1,4 @@
+import { UserService } from './../services/user.service';
 import { CoachService } from './../services/coach.service';
 import { Coach } from './../model/Coach';
 import { Component, OnInit } from '@angular/core';
@@ -9,10 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListCoachsComponent implements OnInit {
   cards? : Coach[];
-  constructor(private coachService:CoachService) { }
+  constructor(private userService:UserService, private coachService:CoachService) { }
 
   ngOnInit(): void {
     this.cards = this.coachService.onGet();
+  }
+
+  OnViewProfile(id: Number){
+    this.userService.OnViewProfile(id);
   }
 
 }

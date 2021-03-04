@@ -1,24 +1,31 @@
 
 
-.nav_logout{
-    margin-left: 900%;
+.nav_logout_user{
+    margin-left: 270%;
 }
 
+.nav_logout_coach{
+    margin-left: 350%;
+}
 
 .navbar-custom { 
-    background-color:rgb(238, 138, 138);
+    background-color:rgb(39, 39, 39);
+    height: 70px;
     
 } 
 
 .nav_buttons{
     color:white;
-    background-color: rgb(238, 138, 138);
-    font-size: 15px;
-    margin-right: 10px;
+    background-color: rgb(39, 39, 39);
+    margin-right: 200px;
 }
 
 
 .logo{
-    width:40%;
-    height:40%;
+    width:20%;
+    height:20%;
+}
+
+.toto{
+    margin-left: -200px;
 }

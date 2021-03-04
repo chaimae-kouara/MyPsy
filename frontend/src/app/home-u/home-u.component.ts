@@ -1,3 +1,4 @@
+import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-u.component.css']
 })
 export class HomeUComponent implements OnInit {
+  idUserIsAuthenticated = this.userService.idUserIsAuthenticated;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    console.log("qqqqqqqqqqqqqqqqqqqqqq",this.idUserIsAuthenticated);
   }
 
 }

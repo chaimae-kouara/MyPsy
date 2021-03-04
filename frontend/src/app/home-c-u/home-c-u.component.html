@@ -1,0 +1,73 @@
+<div class="background">
+    <div class="container">
+      <div class="main-body"><br>
+            <!-- /Breadcrumb -->
+            <div class="row gutters-sm">
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-column align-items-center text-center">
+                      <img src="../../assets/hide-women.jpg" alt="Admin" class="rounded-circle" width="150">
+                      <div class="mt-3">
+                        <h4 class="font_style">{{coachData.getName()}}</h4>
+                        <p class="text-secondary mb-1 font_style">{{coachData.getSpeciality()}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0 font_style">Email</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary font_style">
+                        {{coachData.getEmail()}}
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0 font_style">Phone</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary font_style">
+                        {{coachData.getPhone()}}
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0 font_style">Address</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary font_style">
+                        {{coachData.getAddress().toString()}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                  <div class="grid-container ">   
+                    <mat-grid-list class="cards-float list_style" cols="1" rowHeight="150px">
+                      <mat-grid-tile *ngFor="let card of coursesSelectedCoach" [colspan]="1" [rowspan]="1">
+                        <mat-card class="dashboard-card card-image" >
+                          <mat-card-header>
+                            <mat-card-title class="font_style">
+                              {{card.getTitle()}}
+                            </mat-card-title>
+                          </mat-card-header>
+                          <mat-card-content class="dashboard-card-content card-url">
+                            <a target="_blank" href="{{card.getUrl()}}" class="font_style">{{card.getUrl()}}</a>
+                          </mat-card-content>
+                        </mat-card>
+                      </mat-grid-tile>                  
+                    </mat-grid-list>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    
+    </div>
+    

@@ -11,9 +11,8 @@
                 <div class="d-flex flex-column align-items-center text-center">
                   <img src="../../assets/hide-women.jpg" alt="Admin" class="rounded-circle" width="150">
                   <div class="mt-3">
-                    <h4>John Doe</h4>
-                    <p class="text-secondary mb-1">Speciality</p>
-                    <p class="text-muted font-size-sm">address, adress, address</p>
+                    <h4 class="font_style">{{coachData.getName()}}</h4>
+                    <p class="text-secondary mb-1 font_style">{{coachData.getSpeciality()}}</p>
                   </div>
                 </div>
               </div>
@@ -23,46 +22,28 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Full Name</h6>
+                    <h6 class="mb-0 font_style">Email</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">
-                    Kenneth Valdez
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Email</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    fip@jukmuh.al
+                  <div class="col-sm-9 text-secondary font_style">
+                    {{coachData.getEmail()}}
                   </div>
                 </div>
                 <hr>
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Phone</h6>
+                    <h6 class="mb-0 font_style">Phone</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">
-                    (239) 816-9029
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Mobile</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">
-                    (320) 380-4539
+                  <div class="col-sm-9 text-secondary font_style">
+                    {{coachData.getPhone()}}
                   </div>
                 </div>
                 <hr>
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Address</h6>
+                    <h6 class="mb-0 font_style">Address</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">
-                    Bay Area, San Francisco, CA
+                  <div class="col-sm-9 text-secondary font_style">
+                    {{coachData.getAddress().toString()}}
                   </div>
                 </div>
               </div>
@@ -72,29 +53,143 @@
           </div>
           <div class="col-md-8">
               <div class="grid-container ">
-                
-                <mat-grid-list class="cards-float" cols="2" rowHeight="350px">
-                  <mat-grid-tile *ngFor="let card of cards" [colspan]="2" [rowspan]="1">
-                    <mat-card class="dashboard-card card-image" [style.background-image] = "card.getImage()">
+
+                <div id="accordion" class="add_course">
+                <div class="card">
+                  <div class="card-header card-item" id="headingOne">
+                      <h5 class="mb-0">
+                          <button class="btn btn-link collapsed collapse-items font_style add_course_font" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Add a course
+                          </button>
+                      </h5>
+                  </div>
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card">
+                          <div class="card-body">
+                              <form (ngSubmit)="onSubmit(addCourseForm)" #addCourseForm="ngForm">
+                                  <div class="form-row">
+                                      <div class="col-md-6 mb-3">
+                                          <label for="validationCustom01">Title</label>
+                                          <input
+                                            matInput
+                                            placeholder="Title"
+                                            required
+                                            name="title"
+                                            ngModel
+                                            #title="ngModel">
+
+                                          <div class="valid-feedback">
+                                              Looks good!
+                                          </div>
+                                          <div class="invalid-feedback">
+                                              Please choose a title.
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6 mb-3">
+                                          <label for="validationCustom02">URL</label>
+                                          <input
+                                            matInput
+                                            placeholder="URL"
+                                            required
+                                            name="url"
+                                            ngModel
+                                            #url="ngModel">
+                                          <div class="valid-feedback">
+                                              Looks good!
+                                          </div>
+                                          <div class="invalid-feedback">
+                                              Please choose a URL.
+                                          </div>
+                                      </div>
+                                      
+                                  </div>
+                                  <!--
+                                  <br>
+                                  <div class="form-row">
+                                      <div class="col-md-6 mb-3">
+                                          <label for="validationCustom02">Image</label>
+                                          <input type="file" class="form-control-file" >
+                                          <div class="valid-feedback">
+                                              Looks good!
+                                          </div>
+                                          <div class="invalid-feedback">
+                                              Please choose a URL.
+                                          </div>
+                                      </div>
+                                  </div>
+                                -->
+                                  <button mat-raised-button class="login-button" type="submit">Submit form</button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <mat-grid-list class="cards-float list_style" cols="1" rowHeight="150px">
+                  <mat-grid-tile *ngFor="let card of coursesAuthentificatedCoach" [colspan]="1" [rowspan]="1">
+                    <mat-card class="dashboard-card card-image" >
                       <mat-card-header>
-                        <mat-card-title>
+                        <mat-card-title class="font_style">
                           {{card.getTitle()}}
                           <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                             <mat-icon>more_vert</mat-icon>
                           </button>
                           <mat-menu #menu="matMenu" xPosition="before">
-                            <button mat-menu-item>Expand</button>
-                            <button mat-menu-item>Remove</button>
+                            <button mat-menu-item (click)="OnDeleteCourse(card.getId())">Remove</button>
                           </mat-menu>
                         </mat-card-title>
                       </mat-card-header>
                       <mat-card-content class="dashboard-card-content card-url">
-                        <a href="{{card.getUrl()}}">{{card.getUrl()}}</a>
+                        <a href="{{card.getUrl()}}" class="font_style">{{card.getUrl()}}</a>
                       </mat-card-content>
                     </mat-card>
-                  </mat-grid-tile>
-
-                  
+                  </mat-grid-tile>                  
                 </mat-grid-list>
               </div>
           </div>
